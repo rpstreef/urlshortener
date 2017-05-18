@@ -28,5 +28,11 @@ module.exports = {
 
   resolve: {
     extensions: ['', '.js', '.jsx', '.json']
+  },
+
+  node: {
+      net: 'empty',
+      tls: 'empty',
+      dns: 'empty'
   }
 };

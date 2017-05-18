@@ -4,7 +4,8 @@
   "description": "URL Shortener",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && node index.js",
+    "start": "npm run dev",
+    "webpack": "webpack && node index.js",
     "dev": "webpack -w & nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,11 +27,22 @@
     "nodemon": "^1.9.2"
   },
   "dependencies": {
+    "async": "2.4.0",
+    "bijective-shortener": "^0.2.2",
+    "blueimp-md5": "^2.7.0",
+    "body-parser": "^1.17.1",
+    "concurrently": "^3.4.0",
+    "cors": "^2.8.3",
     "express": "^4.15.3",
+    "json-server": "^0.9.6",
     "react": "^15.1.0",
+    "react-bootstrap": "^0.31.0",
     "react-dom": "^15.1.0",
     "react-engine": "^4.0.0",
     "react-router": "^2.4.0",
-    "serve-favicon": "^2.3.0"
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "serve-favicon": "^2.3.0",
+    "short-duid-js": "^1.1.1"
   }
 }
