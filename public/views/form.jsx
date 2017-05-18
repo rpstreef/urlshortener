@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react');
+var Info = require('./info.jsx');
 
 module.exports = React.createClass({
     displayName: 'Shorten it!',
@@ -45,17 +46,9 @@ module.exports = React.createClass({
     },
 
     render: function render() {
-        let button = null;
-        if (this.state.message != undefined) {
-            button = this.state.message;
-        } else {
-            button = '';
-        }
         return (
             <div>
-                <div>
-                    {button}
-                </div>
+                { this.state.message ? <Info message={this.state.message} /> : null }
                  
                 <form action="" onSubmit={this.handleSubmit} className="bs-component">
                     <div className="form-group">

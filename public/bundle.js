@@ -10103,8 +10103,7 @@
 	        ),
 	        React.createElement('link', { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css' }),
 	        React.createElement('link', { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css' }),
-	        React.createElement('link', { href: '/flatly.css', rel: 'stylesheet' }),
-	        React.createElement('link', { href: '/styles.css', rel: 'stylesheet' })
+	        React.createElement('link', { href: './css/flatly.css', rel: 'stylesheet' })
 	      ),
 	      React.createElement(
 	        'body',
@@ -10153,6 +10152,7 @@
 	'use strict';
 
 	var React = __webpack_require__(2);
+	var Info = __webpack_require__(308);
 
 	module.exports = React.createClass({
 	    displayName: 'Shorten it!',
@@ -10196,20 +10196,10 @@
 	    },
 
 	    render: function render() {
-	        var button = null;
-	        if (this.state.message != undefined) {
-	            button = this.state.message;
-	        } else {
-	            button = '';
-	        }
 	        return React.createElement(
 	            'div',
 	            null,
-	            React.createElement(
-	                'div',
-	                null,
-	                button
-	            ),
+	            this.state.message ? React.createElement(Info, { message: this.state.message }) : null,
 	            React.createElement(
 	                'form',
 	                { action: '', onSubmit: this.handleSubmit, className: 'bs-component' },
@@ -29727,6 +29717,8 @@
 		"./500.jsx": 307,
 		"./form": 101,
 		"./form.jsx": 101,
+		"./info": 308,
+		"./info.jsx": 308,
 		"./layout": 100,
 		"./layout.jsx": 100
 	};
@@ -29774,6 +29766,32 @@
 	        'code',
 	        null,
 	        this.props.err.stack
+	      )
+	    );
+	  }
+	});
+
+/***/ }),
+/* 308 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	
+	'use strict';
+
+	var React = __webpack_require__(2);
+
+	module.exports = React.createClass({
+	  displayName: 'exports',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'span',
+	        { className: 'label label-primary' },
+	        ' ',
+	        this.props.message
 	      )
 	    );
 	  }

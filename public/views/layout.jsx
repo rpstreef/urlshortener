@@ -15,8 +15,7 @@ module.exports = React.createClass({
           <title>URL Shortener</title>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css" />
-          <link href="/flatly.css" rel="stylesheet" />
-          <link href="/styles.css" rel="stylesheet" />
+          <link href="./css/flatly.css" rel="stylesheet" />
         </head>
         <body id="home">
           <div className="navbar navbar-default navbar-fixed-top">

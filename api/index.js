@@ -11,10 +11,11 @@ import db from './services/db.js';
 export default ({ config }) => {
 	let api = Router();
 
+	/**
+	 * shorten:
+	 * 	- first checks if url entered is valid, then pass it on to database service function.
+	 */
 	api.post('/shorten', (req, res, next) => {
-		
-		console.log("Req body: " + JSON.stringify(req.body));
-		// check db
 		if(validateURL.isURLValid(req.body.url)){
 			db.getShortUrl(req.body.url, config, res);
 		} else {
