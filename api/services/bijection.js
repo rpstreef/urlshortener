@@ -1,6 +1,10 @@
 const alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"; //Base 58
 const base = 58;
-
+/**
+ * 
+ * Can in some cases produce a shorturl that converts to a different ID number,
+ * so no reliable, use 'bijective-shortener' package
+ */
 module.exports = {
     encode: function (dbId) {
         var encoded = '';
